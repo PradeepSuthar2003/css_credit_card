@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>credit_card</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .main_div {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: hsl(85, 99%, 90%);
+        }
+
+        .child_div {
+            width: 400px;
+            height: 200px;
+            background-image: linear-gradient(#2193b0, #6dd5ed);
+            box-shadow: 0px 10px 90px rgb(0, 0, 0, 0.8);
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .top_items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px 0px 20px;
+        }
+
+        h1 {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            z-index: 1;
+        }
+
+        h2 {
+            color: white;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 2px;
+            z-index: 1;
+        }
+
+        h3 {
+            color: white;
+            font-size: 18px;
+            letter-spacing: 2px;
+            z-index: 1;
+        }
+
+        .bottom_items {
+            position: absolute;
+            bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .child_div::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(#614385, #516395);
+            clip-path: polygon(100% 0, 100% 100%, 61% 35%, 0 0);
+            border-radius: 10px;
+            transition: .8s;
+        }
+
+        .child_div::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(#614385, #516395);
+            border-radius: 10px;
+            z-index: -1;
+            transition: .8s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main_div">
+        <div class="child_div">
+            <div class="top_items">
+                <h3>Credit</h3>
+                <h1>visa</h1>
+            </div>
+            <div class="bottom_items">
+                <h2>Pradeep Suthar</h2>
+                <h3>2356-6864-2345-1456</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
